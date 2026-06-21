@@ -428,6 +428,82 @@
       to   { opacity: 1; transform: translateY(0); }
     }
 
+    /* CREDENTIALS */
+    .cred-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .cred-block {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--orange);
+      padding: 2rem;
+    }
+    .cred-block h4 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.4rem;
+      letter-spacing: 2px;
+      color: var(--orange-glow);
+      margin-bottom: 1rem;
+    }
+    .cred-block ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .cred-block li {
+      font-size: 0.85rem;
+      color: var(--white);
+      padding-left: 1.2rem;
+      position: relative;
+      line-height: 1.5;
+    }
+    .cred-block li::before {
+      content: '✓';
+      position: absolute; left: 0;
+      color: var(--orange);
+      font-weight: 700;
+    }
+
+    /* VIDEO TESTIMONIALS */
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .video-placeholder {
+      background: var(--card);
+      border: 1px dashed var(--border);
+      aspect-ratio: 9/16;
+      max-height: 420px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      transition: border-color 0.3s;
+    }
+    .video-placeholder:hover { border-color: var(--orange); }
+    .video-placeholder .play-icon {
+      width: 56px; height: 56px;
+      border-radius: 50%;
+      background: rgba(249,115,22,0.15);
+      border: 1px solid rgba(249,115,22,0.4);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.4rem;
+      color: var(--orange);
+    }
+    .video-placeholder .video-label {
+      font-size: 0.8rem;
+      color: var(--muted);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
     /* RESPONSIVE */
     @media (max-width: 768px) {
       .transformation-grid, .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
@@ -442,8 +518,10 @@
 <nav>
   <div class="nav-logo">RP FITNESS</div>
   <ul class="nav-links">
+    <li><a href="#credentials">Credentials</a></li>
     <li><a href="#services">Services</a></li>
     <li><a href="#transformation">Results</a></li>
+    <li><a href="#testimonials">Testimonials</a></li>
     <li><a href="#nutrition">Nutrition</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
@@ -452,14 +530,15 @@
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-bg-text">TRAIN</div>
+  <div class="hero-bg-text">DOMINATE</div>
   <div class="hero-content">
-    <div class="hero-tag">📍 Lonavala, Maharashtra</div>
+    <div class="hero-tag">📍 Lonavala, Maharashtra · Premium Online & Offline Coaching</div>
     <h1>RAJ<br/><span>PANDEY</span></h1>
-    <p class="hero-sub">Certified fitness coach specialising in fat loss, muscle gain, Olympic weightlifting, cricket conditioning & rehab — online & offline.</p>
+    <p class="hero-sub">Certified Fitness, Rehabilitation & High-Performance Specialist. Stop waiting. Start building. Every elite transformation begins the exact moment you decide that enough is enough.</p>
+    <p class="hero-sub" style="margin-top:0.8rem;font-style:italic;color:var(--orange-glow);">Your body will change. Your mindset will shift. Your life will elevate.</p>
     <div class="hero-actions">
-      <a href="#services" class="btn-primary">View Services</a>
-      <a href="#contact" class="btn-outline">Get in Touch</a>
+      <a href="https://wa.me/917219199763?text=Hi%20Raj,%20I%20want%20to%20book%20a%20consultation!" target="_blank" class="btn-primary">WhatsApp Me Now</a>
+      <a href="#contact" class="btn-outline">Book Your Consultation</a>
     </div>
   </div>
 </section>
@@ -468,23 +547,64 @@
 <div class="stats">
   <div>
     <div class="stat-num">6+</div>
-    <div class="stat-label">Services Offered</div>
+    <div class="stat-label">Specialized Premium Services</div>
   </div>
   <div>
     <div class="stat-num">26</div>
-    <div class="stat-label">Sessions / Month</div>
+    <div class="stat-label">High-Intensity Sessions/Month</div>
   </div>
   <div>
     <div class="stat-num">100%</div>
-    <div class="stat-label">Personalised Plans</div>
+    <div class="stat-label">Bespoke Training & Diet Protocols</div>
   </div>
   <div>
     <div class="stat-num">∞</div>
-    <div class="stat-label">Transformations</div>
+    <div class="stat-label">Life-Changing Transformations</div>
   </div>
 </div>
 
-<!-- TRANSFORMATION -->
+<!-- CREDENTIALS -->
+<section class="section" id="credentials">
+  <div class="section-tag">Train With Confidence</div>
+  <h2 class="section-title">CREDENTIALS &<br/>CERTIFICATIONS</h2>
+  <p class="section-sub">Elite expertise built on global gold-standard education. World-class, certified guidance — every single session.</p>
+
+  <div class="cred-grid">
+    <div class="cred-block">
+      <h4>Core Academy Qualifications</h4>
+      <ul>
+        <li>Diploma in Personal Training – K11 Academy of Fitness Sciences</li>
+        <li>Human Performance Nutritionist (HPN) – K11 Academy of Fitness Sciences</li>
+        <li>Diploma in Strength & Conditioning and High Performance – Prehab 121 Academy</li>
+        <li>NSQF Level 4 (Fitness Trainer) Certified – SPEFL-SC (Skill India / NSDC)</li>
+        <li>Registered Professional Member – REPS INDIA</li>
+        <li>Lifesaving CPR & AED Certified</li>
+      </ul>
+    </div>
+    <div class="cred-block">
+      <h4>Advanced Specialisations <span style="color:var(--muted);font-size:0.7rem;">(ACE & ACSM Approved)</span></h4>
+      <ul>
+        <li>Strength & Conditioning Training Specialist</li>
+        <li>Cricket Strength & Conditioning Specialist (Speed, Power, Agility)</li>
+        <li>Sports & Exercise Nutrition Specialist</li>
+        <li>Olympic Weightlifting Specialist (Technique & Power)</li>
+        <li>Kettlebell Training Specialist</li>
+        <li>Prehab & Rehab Specialist (Injury Recovery & Prevention)</li>
+        <li>Posture & Functional Corrective Exercise Specialist</li>
+        <li>Resistance Band Training Specialist</li>
+        <li>Functional & Group Training Specialist</li>
+      </ul>
+    </div>
+    <div class="cred-block">
+      <h4>Elite Masterclasses</h4>
+      <ul>
+        <li>Advanced Anabolics Certification</li>
+        <li>Competitive Bodybuilding Posing Masterclass</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
 <section class="section" id="transformation">
   <div style="margin-bottom:3rem;">
     <div class="section-tag">Real Results</div>
@@ -514,23 +634,23 @@
 <!-- SERVICES -->
 <section class="section" id="services" style="background: var(--charcoal);">
   <div class="section-tag">What I Offer</div>
-  <h2 class="section-title">TRAINING<br/>PROGRAMMES</h2>
-  <p class="section-sub">Choose from 1-on-1 personal training to specialised sport-specific conditioning — online or offline.</p>
+  <h2 class="section-title">PREMIUM TRAINING<br/>PROGRAMS</h2>
+  <p class="section-sub">Choose from 1-on-1 elite coaching to specialised sport-specific conditioning — online or offline.</p>
 
   <div class="services-grid">
 
     <div class="service-card">
       <div class="service-num">01</div>
-      <div class="service-name">Personal Training</div>
-      <div class="service-desc">Fat Loss · Muscle Gain · Injury Care</div>
+      <div class="service-name">Elite Personal Training</div>
+      <div class="service-desc">Fat Loss · Muscle Gain · Specialized Injury Care</div>
       <div class="price-row">
         <div class="price-item">
-          <div class="price-mode">Offline</div>
+          <div class="price-mode">Offline (Lonavala)</div>
           <div class="price-amount">₹15,000</div>
           <div class="price-sessions">26 sessions / month</div>
         </div>
         <div class="price-item">
-          <div class="price-mode">Online</div>
+          <div class="price-mode">Online (Global)</div>
           <div class="price-amount">₹12,000</div>
           <div class="price-sessions">26 sessions / month</div>
         </div>
@@ -539,16 +659,16 @@
 
     <div class="service-card">
       <div class="service-num">02</div>
-      <div class="service-name">Group Training</div>
-      <div class="service-desc">Strength + Conditioning in Small Groups</div>
+      <div class="service-name">High-Performance S&C</div>
+      <div class="service-desc">For Competitive Athletes & Performance Clients</div>
       <div class="price-row">
         <div class="price-item">
-          <div class="price-mode">Offline</div>
+          <div class="price-mode">Offline (Lonavala)</div>
           <div class="price-amount">₹12,000</div>
           <div class="price-sessions">12 sessions / month</div>
         </div>
         <div class="price-item">
-          <div class="price-mode">Online</div>
+          <div class="price-mode">Online (Global)</div>
           <div class="price-amount">₹10,000</div>
           <div class="price-sessions">12 sessions / month</div>
         </div>
@@ -557,16 +677,16 @@
 
     <div class="service-card">
       <div class="service-num">03</div>
-      <div class="service-name">Strength & Conditioning</div>
-      <div class="service-desc">Athletes & Performance Clients</div>
+      <div class="service-name">Specialized Cricket S&C</div>
+      <div class="service-desc">Explosive Speed · Rotational Power · Match-Day Agility</div>
       <div class="price-row">
         <div class="price-item">
-          <div class="price-mode">Offline</div>
+          <div class="price-mode">Offline (Lonavala)</div>
           <div class="price-amount">₹12,000</div>
           <div class="price-sessions">12 sessions / month</div>
         </div>
         <div class="price-item">
-          <div class="price-mode">Online</div>
+          <div class="price-mode">Online (Global)</div>
           <div class="price-amount">₹10,000</div>
           <div class="price-sessions">12 sessions / month</div>
         </div>
@@ -575,34 +695,16 @@
 
     <div class="service-card">
       <div class="service-num">04</div>
-      <div class="service-name">Olympic Weightlifting</div>
-      <div class="service-desc">Technique + Strength Focused</div>
+      <div class="service-name">Injury Rehab & Prehab</div>
+      <div class="service-desc">Movement Correction · Pain Elimination · Joint Strength</div>
       <div class="price-row">
         <div class="price-item">
-          <div class="price-mode">Offline</div>
-          <div class="price-amount">₹6,000</div>
-          <div class="price-sessions">12 sessions / month</div>
-        </div>
-        <div class="price-item">
-          <div class="price-mode">Online</div>
-          <div class="price-amount">₹5,000</div>
-          <div class="price-sessions">12 sessions / month</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="service-card">
-      <div class="service-num">05</div>
-      <div class="service-name">Cricket S&C</div>
-      <div class="service-desc">Speed · Power · Agility · Injury Prevention</div>
-      <div class="price-row">
-        <div class="price-item">
-          <div class="price-mode">Offline</div>
+          <div class="price-mode">Offline (Lonavala)</div>
           <div class="price-amount">₹12,000</div>
           <div class="price-sessions">12 sessions / month</div>
         </div>
         <div class="price-item">
-          <div class="price-mode">Online</div>
+          <div class="price-mode">Online (Global)</div>
           <div class="price-amount">₹10,000</div>
           <div class="price-sessions">12 sessions / month</div>
         </div>
@@ -610,17 +712,35 @@
     </div>
 
     <div class="service-card">
-      <div class="service-num">06</div>
-      <div class="service-name">Rehab & Prehab</div>
-      <div class="service-desc">Recovery · Injury Prevention · Movement</div>
+      <div class="service-num">05</div>
+      <div class="service-name">Olympic Weightlifting</div>
+      <div class="service-desc">Snatch & Clean and Jerk Technical Mastery</div>
       <div class="price-row">
         <div class="price-item">
-          <div class="price-mode">Offline</div>
+          <div class="price-mode">Offline (Lonavala)</div>
+          <div class="price-amount">₹6,000</div>
+          <div class="price-sessions">12 sessions / month</div>
+        </div>
+        <div class="price-item">
+          <div class="price-mode">Online (Global)</div>
+          <div class="price-amount">₹5,000</div>
+          <div class="price-sessions">12 sessions / month</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="service-card">
+      <div class="service-num">06</div>
+      <div class="service-name">Dynamic Group Training</div>
+      <div class="service-desc">Peak Fitness Inside an Intense Small-Group Community</div>
+      <div class="price-row">
+        <div class="price-item">
+          <div class="price-mode">Offline (Lonavala)</div>
           <div class="price-amount">₹12,000</div>
           <div class="price-sessions">12 sessions / month</div>
         </div>
         <div class="price-item">
-          <div class="price-mode">Online</div>
+          <div class="price-mode">Online (Global)</div>
           <div class="price-amount">₹10,000</div>
           <div class="price-sessions">12 sessions / month</div>
         </div>
@@ -633,29 +753,51 @@
 <!-- NUTRITION -->
 <section class="section" id="nutrition">
   <div class="section-tag">Eat Right</div>
-  <h2 class="section-title">NUTRITION<br/>PLANS</h2>
-  <p class="section-sub">Customised meal plans to complement your training and accelerate results.</p>
+  <h2 class="section-title">CUSTOMISED NUTRITION<br/>PROTOCOLS</h2>
+  <p class="section-sub">Fuel your ambition. Highly tailored, macro-precise meal plans designed to complement your training and accelerate your peak physique.</p>
 
   <div class="nutrition-grid">
     <div class="nutrition-card">
       <div class="nutrition-duration">1 Month</div>
       <div class="nutrition-price-big">₹10,000</div>
-      <div class="nutrition-label">Personalised Plan</div>
+      <div class="nutrition-label">Intensive Plan · Fully Personalised</div>
     </div>
     <div class="nutrition-card">
       <div class="nutrition-duration">3 Months</div>
       <div class="nutrition-price-big">₹20,000</div>
-      <div class="nutrition-label">Save ₹10,000</div>
+      <div class="nutrition-label">Transformation Blueprint · Save ₹10,000</div>
     </div>
     <div class="nutrition-card">
       <div class="nutrition-duration">6 Months</div>
       <div class="nutrition-price-big">₹30,000</div>
-      <div class="nutrition-label">Save ₹30,000</div>
+      <div class="nutrition-label">Lifestyle Overhaul · Save ₹30,000</div>
     </div>
     <div class="nutrition-card" style="border-color: var(--orange);">
-      <div class="nutrition-duration" style="color:var(--orange-glow);">1 Year</div>
+      <div class="nutrition-duration" style="color:var(--orange-glow);">👑 1 Year</div>
       <div class="nutrition-price-big">₹40,000</div>
-      <div class="nutrition-label">Best Value Plan</div>
+      <div class="nutrition-label">Elite Legacy Membership · Save ₹80,000!</div>
+    </div>
+  </div>
+</section>
+
+<!-- VIDEO TESTIMONIALS -->
+<section class="section" id="testimonials" style="background: var(--charcoal);">
+  <div class="section-tag">In Their Words</div>
+  <h2 class="section-title">CLIENT<br/>FEEDBACK</h2>
+  <p class="section-sub">Real voices. Real transformations. Hear directly from clients who trained with RP Fitness.</p>
+
+  <div class="video-grid">
+    <div class="video-placeholder">
+      <div class="play-icon">▶</div>
+      <div class="video-label">Video coming soon</div>
+    </div>
+    <div class="video-placeholder">
+      <div class="play-icon">▶</div>
+      <div class="video-label">Video coming soon</div>
+    </div>
+    <div class="video-placeholder">
+      <div class="play-icon">▶</div>
+      <div class="video-label">Video coming soon</div>
     </div>
   </div>
 </section>
@@ -698,8 +840,8 @@
     </div>
 
     <div class="cta-box">
-      <h3>READY TO TRANSFORM?</h3>
-      <p>Drop a message and Raj will get back to you within 24 hours to discuss your goals and the right programme for you.</p>
+      <h3>APPLY FOR YOUR TRANSFORMATION</h3>
+      <p>Stop dreaming. Start dominating. Drop a message and Raj will get back to you within 24 hours to discuss your goals and the right programme for you.</p>
       <a href="https://wa.me/917219199763?text=Hi%20Raj,%20I%20want%20to%20know%20more%20about%20your%20training%20programmes!" target="_blank" class="btn-dark">💬 Message on WhatsApp</a>
       <br/><br/>
       <a href="mailto:rp4368644@gmail.com" class="btn-dark">✉️ Send an Email</a>
